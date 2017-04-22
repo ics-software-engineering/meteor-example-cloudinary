@@ -1,0 +1,15 @@
+<template name="Home_Page">
+
+  <div style="margin-top: 20px" class="ui container">
+
+    <form class="ui form student-data-form  {{ successClass }} {{ errorClass }}">
+      <h4 class="ui dividing header">Upload image</h4>
+
+      {{> Text_Form_Control label="Name" required=true errorMessage=(fieldError "name")}}
+
+      <button class="ui primary button" type="submit">Submit</button>
+
+    </form>
+
+  </div>
+</template>

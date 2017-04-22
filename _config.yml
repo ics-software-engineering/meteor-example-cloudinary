@@ -1,0 +1,8 @@
+title: meteor-example-cloudinary
+description: A template for understanding how to integrate Meteor with Cloudinary.
+google_analytics: 
+show_downloads: true
+theme: jekyll-theme-cayman
+
+gems:
+  - jekyll-mentions
