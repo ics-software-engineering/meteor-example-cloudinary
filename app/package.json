@@ -2,7 +2,7 @@
   "name": "meteor-example-cloudinary",
   "private": true,
   "scripts": {
-    "start": "meteor --no-release-check",
+    "start": "meteor --settings ../config/settings.production.json --no-release-check",
     "lint": "eslint --quiet ./imports"
   },
   "dependencies": {
