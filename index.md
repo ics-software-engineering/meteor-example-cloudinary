@@ -1,11 +1,11 @@
-![](https://raw.githubusercontent.com/ics-software-engineering/meteor-application-template/master/doc/home-page.png)
+![](https://raw.githubusercontent.com/ics-software-engineering/meteor-example-cloudinary/master/doc/home-page.png)
 
-Meteor-example-cloudinary is a sample Meteor 1.4 application that illustrates the use of [Cloudinary](http://cloudinary.com) for image uploading and display. The current example is quite simple and shows the use of Cloudinary's [unsigned uploading](http://cloudinary.com/blog/direct_upload_made_easy_from_browser_or_mobile_app_to_the_cloud) capability.
+Meteor-example-cloudinary is a sample Meteor application that illustrates the use of [Cloudinary](http://cloudinary.com) for image uploading and display. The current example is quite simple and shows the use of Cloudinary's [unsigned uploading](http://cloudinary.com/blog/direct_upload_made_easy_from_browser_or_mobile_app_to_the_cloud) capability.
  
 The structure of this application is based on:
 
-  * [Meteor-application-template](http://ics-software-engineering.github.io/meteor-application-template/)
-  * [Meteor-example-form](https://ics-software-engineering.github.io/meteor-example-form/)
+  * [meteor-application-template](http://ics-software-engineering.github.io/meteor-application-template/)
+  * [meteor-example-form](https://ics-software-engineering.github.io/meteor-example-form/)
   
 Please refer to these applications for more details on the overall structure of this application.  The following documentation explains on ly the cloudinary-specific aspects.
 
