@@ -2,7 +2,19 @@
   {{!
   Provides a button that pops up the Cloudinary Upload Widget.
   }}
-  <button class="ui button" id="cloudinary-upload-widget">
-    Cloudinary Upload Widget
-  </button>
+  <div class="{{#if required}}required{{/if}} field">
+    <label>Image File</label>
+    <div class="fields">
+      <div class="twelve wide field">
+        <input type="text"   name="imageFileName" placeholder="Please upload image">
+        <input type="hidden" name="imageUrl" disabled="true">
+        <input type="hidden" name="imageThumbnailUrl" disabled="true">
+      </div>
+      <div class="four wide field">
+        <button class="ui button" id="cloudinary-upload-widget">
+          Upload image file
+        </button>
+      </div>
+    </div>
+  </div>
 </template>

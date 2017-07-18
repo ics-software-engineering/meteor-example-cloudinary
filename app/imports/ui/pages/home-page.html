@@ -5,9 +5,9 @@
     <form class="ui form student-data-form  {{ successClass }} {{ errorClass }}">
       <h4 class="ui dividing header">Upload image</h4>
 
-      {{> Text_Form_Control label="Name" required=true errorMessage=(fieldError "name")}}
+      {{> Text_Form_Control label="Image Name" required=true name="imageName" errorMessage=(fieldError "imageName")}}
 
-      {{> Cloudinary_Upload_Widget }}
+      {{> Cloudinary_Upload_Widget required=true name="imageUrl" errorMessage=(fieldError "imageUrl")}}
 
       <button class="ui primary button" type="submit">Submit</button>
 

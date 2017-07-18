@@ -1,3 +1,5 @@
 {
-  "cloudinary": {"cloud_name": "changeme", "upload_preset": "changeme"}
+  "public": {
+    "cloudinary": {"cloud_name": "changeme", "upload_preset": "changeme"}
+  }
 }
