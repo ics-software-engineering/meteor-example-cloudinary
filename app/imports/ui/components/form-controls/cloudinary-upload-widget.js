@@ -21,16 +21,18 @@ Template.Cloudinary_Upload_Widget.events({
         min_image_height: '300',
       },
       (error, result) => {
-        console.log('Error: ', error, 'Result: ', result);
         if (error) {
-          console.log('Error during cloudinary upload: ', error);
+          console.log('Error during Cloudinary upload: ', error);
           return;
         }
-        // Otherwise update the form elements
+        // Otherwise get the form elements
+        // console.log('Cloudinary results: ', result);
         const fileName = result[0].original_filename;
-        // const thumbnailUrl = result[0].thumbnail_url;
-        // const url = result[0].url;
-        $("input[name='imageFileName']").val(fileName);
+        const thumbnail = result[0].thumbnail_url;
+        const url = result[0].url;
+        $("input[name='cloudinaryFileName']").val(fileName);
+        $("input[name='cloudinaryUrl']").val(url);
+        $("input[name='cloudinaryThumbnail']").val(thumbnail);
       });
   },
 });

@@ -2,16 +2,35 @@
 
   <div style="margin-top: 20px" class="ui container">
 
-    <form class="ui form student-data-form  {{ successClass }} {{ errorClass }}">
-      <h4 class="ui dividing header">Upload image</h4>
-
-      {{> Text_Form_Control label="Image Name" required=true name="imageName" errorMessage=(fieldError "imageName")}}
-
-      {{> Cloudinary_Upload_Widget required=true name="imageUrl" errorMessage=(fieldError "imageUrl")}}
-
+    <form class="ui form image-data-form  {{ successClass }} {{ errorClass }}">
+      <h3 class="ui dividing header">Upload new image</h3>
+      {{> Text_Form_Control label="Name" name="name" required=true errorMessage=(fieldError "name")}}
+      {{> Cloudinary_Upload_Widget label="Image" required=true errorMessage=(fieldError "url")}}
       <button class="ui primary button" type="submit">Submit</button>
-
     </form>
+
+    {{#if Template.subscriptionsReady}}
+      <hr>
+      <h3>Uploaded images</h3>
+      <table class="ui very basic table">
+        <thead>
+        <tr>
+          <th>Thumbnail</th>
+          <th>Name</th>
+          <th>Image</th>
+        </tr>
+        </thead>
+        <tbody>
+          {{#each image in images}}
+            <tr>
+              <td><img class="ui image" src="{{image.thumbnail}}"></td>
+              <td>{{image.name}}</td>
+              <td><a href="{{image.url}}">Full image</a></td>
+            </tr>
+          {{/each}}
+        </tbody>
+      </table>
+    {{/if}}
 
   </div>
 </template>
