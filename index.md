@@ -1,6 +1,17 @@
 ![](https://raw.githubusercontent.com/ics-software-engineering/meteor-example-cloudinary/master/doc/home-page.png)
 
-Meteor-example-cloudinary is a sample Meteor application that illustrates the use of [Cloudinary](http://cloudinary.com) for image uploading and display. The current example is quite simple and shows the use of Cloudinary's [unsigned uploading](http://cloudinary.com/blog/direct_upload_made_easy_from_browser_or_mobile_app_to_the_cloud) capability.
+Meteor-example-cloudinary is a sample Meteor application that illustrates the use of [Cloudinary](http://cloudinary.com) for image uploading and display. The combination of Cloudinary's [unsigned uploading](http://cloudinary.com/blog/direct_upload_made_easy_from_browser_or_mobile_app_to_the_cloud) and [Upload Widget](http://cloudinary.com/documentation/upload_widget) makes it quite simple to implement non-trivial image uploading and manipulation. 
+ 
+To illustrate these features, this sample application:
+ 
+   * Provides a single page that enables users to upload images to the Cloudinary service.
+   * The images can be located on the local file system, or via a URL, or can be created with the user's camera (camera-based image selection available only if the site is hosted via https).
+   * The selected image must be cropped to a square for uploading.
+   * The selected image is down-sampled to 500x500 pixels if the crop area is larger for uploading. 
+   * The selected image must be a minimum of 300x300 pixels for uploading.
+   * Only the cropped, (potentially down-sampled) image is stored at the Cloudinary service.
+   
+All of these constraints can be changed to suit for your own requirements, but they provide a generally useful starting point for many application development scenarios. 
  
 The structure of this application is based on:
 
