@@ -30,7 +30,7 @@ To run this application, you must first [sign up for a free Cloudinary account](
 
 #### Create an "upload preset"
 
-Second, create an "upload preset" to allow unsigned uploading. You create an upload preset in the [Settings | Upload](https://cloudinary.com/console/settings/upload) area of your Cloudinary management dashboard. After it's been created, you will see something like this:
+Now create an "upload preset" to allow unsigned uploading. You create an upload preset in the [Settings / Upload](https://cloudinary.com/console/settings/upload) area of your Cloudinary management dashboard. After it's been created, you will see something like this:
 
 ![](https://raw.githubusercontent.com/ics-software-engineering/meteor-example-cloudinary/master/doc/upload-preset.png)
 
@@ -75,7 +75,7 @@ Edit this file to contain your account's cloud name and upload preset. For examp
 
 #### Run the program
 
-Now you can run the application by invoking the ["start" script in the package.json file](https://github.com/ics-software-engineering/meteor-application-template/blob/master/app/package.json#L5):
+Now you can run the application by invoking the "start" script in the package.json file:
 
 ```
 $ meteor npm run start
@@ -120,12 +120,11 @@ Then we can click "Select File", and choose the file of Jerry on our desktop.  T
 
 The requirement to crop, and the constraint that the crop yield a square, is easily changed in the example source code. 
 
-If you now click "Upload", two things happen. First, the image is uploaded to Cloudinary. Second, you are returned to the Meteor form and the file name field is filled in:
+If you now click "Upload", two things happen. First, the image is uploaded to Cloudinary. Second, you are returned to the Meteor form and the image field is filled in with the file name ("jerry"):
 
 ![](https://raw.githubusercontent.com/ics-software-engineering/meteor-example-cloudinary/master/doc/home-page-form-ready-for-submit.png)
 
-At this point, the image has already been uploaded to Cloudinary, but since we have not submitted this form, the Meteor application does not 
-know about it yet. So, let's click "Submit" to submit the form with the pointer to the uploaded image. Once we do that, the page looks like this:
+At this point, the image has already been uploaded to Cloudinary, but since we have not yet submitted this form, the Meteor application does not know about the image. So, let's click "Submit" to submit the form with the pointer to the uploaded image. Once we do that, the page looks like this:
 
 ![](https://raw.githubusercontent.com/ics-software-engineering/meteor-example-cloudinary/master/doc/home-page-form-after-submit.png)
 
