@@ -73,6 +73,8 @@ Edit this file to contain your account's cloud name and upload preset. For examp
 }
 ```
 
+Note that I've subsequently changed the value for my upload preset.
+
 #### Run the program
 
 Now you can run the application by invoking the "start" script in the package.json file:
