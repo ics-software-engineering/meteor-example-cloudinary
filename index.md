@@ -139,7 +139,7 @@ Note that if we go to our Cloudinary Media Library page, we can now see the uplo
 
 ## Code Walkthrough
 
-For more details on how this application is constructed, please watch this brief overview:
+For more details on how this application is constructed, please watch a brief overview by clicking on the image below:
 
 [<img src="https://raw.githubusercontent.com/ics-software-engineering/meteor-example-cloudinary/master/doc/meteor-example-cloudinary-youtube.png" width="600">](https://www.youtube.com/watch?v=pYgXEGFnZKc)
 
