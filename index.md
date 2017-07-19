@@ -130,9 +130,9 @@ At this point, the image has already been uploaded to Cloudinary, but since we h
 
 ![](https://raw.githubusercontent.com/ics-software-engineering/meteor-example-cloudinary/master/doc/home-page-form-after-submit.png)
 
-What has happened is that the form submission process has updated a Meteor collection containing the image name and the URLs returned by the Cloudinary upload widget for a thumbnail view as well as the full size (cropped) image. The page has a simple table below the form to display all of the documents in this collection. 
+After pressing submit, the form submission process adds a new document to a Meteor collection containing the image name and the URLs returned by the Cloudinary upload widget for a thumbnail view as well as the full size (cropped) image. The page has a simple table below the form to display all of the documents in this collection. It is reactively updated with the new contents of the collection.
 
-Finally, if we go to our Cloudinary Media Library page, we can see the uploaded image, which is stored in its cropped and down-sampled form:
+Note that if we go to our Cloudinary Media Library page, we can now see the uploaded image, which is stored in its cropped and down-sampled form:
 
 ![](https://raw.githubusercontent.com/ics-software-engineering/meteor-example-cloudinary/master/doc/cloudinary-media-library.png)
 
