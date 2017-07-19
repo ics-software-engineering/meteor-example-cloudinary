@@ -141,5 +141,16 @@ Finally, if we go to our Cloudinary Media Library page, we can see the uploaded 
 
 For more details on how this application is constructed, please watch this brief overview:
 
-[<img src="https://raw.githubusercontent.com/ics-software-engineering/meteor-application-template/master/doc/meteor-application-template-youtube.png" width="600">](https://www.youtube.com/watch?v=kEJN3kjyugs)
+[<img src="https://raw.githubusercontent.com/ics-software-engineering/meteor-example-cloudinary/master/doc/meteor-example-cloudinary-youtube.png" width="600">](https://www.youtube.com/watch?v=pYgXEGFnZKc)
+
+
+## Cloudinary documentation
+
+Here are some links to Cloudinary documentation that I found useful when developing this application:
+ 
+  * [Direct upload made easy](http://cloudinary.com/blog/direct_upload_made_easy_from_browser_or_mobile_app_to_the_cloud)
+  * [Upload widget](http://cloudinary.com/documentation/upload_widget)
+  * [Incoming transformations](http://cloudinary.com/documentation/upload_images#incoming_transformations)
+  * [How to crop images via the upload widget](https://support.cloudinary.com/hc/en-us/articles/203062071-How-to-crop-images-via-the-Upload-Widget-)
+  * [Centralized control for image uploading](http://cloudinary.com/blog/centralized_control_for_image_upload_image_size_format_thumbnail_generation_tagging_and_more)
 
