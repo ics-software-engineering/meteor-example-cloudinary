@@ -28,6 +28,8 @@ To run this application, you must first define and configure a Cloudinary accoun
 
 To run this application, you must first [sign up for a free Cloudinary account](https://cloudinary.com/users/register/free). The free plan (as of Summer, 2017) offers 75K total images, 2 GB storage, and 5 GB monthly bandwidth. This should be enough for demo purposes.
 
+During the initial user configuration wizard, the "Account Settings" dialog will provide the option to enable unsigned uploads. You should enable this feature. 
+
 #### Create an "upload preset"
 
 Now create an "upload preset" to allow unsigned uploading. You create an upload preset in the [Settings / Upload](https://cloudinary.com/console/settings/upload) area of your Cloudinary management dashboard. After it's been created, you will see something like this:
