@@ -1,5 +1,6 @@
 import { Mongo } from 'meteor/mongo';
-import { SimpleSchema } from 'meteor/aldeed:simple-schema';
+import SimpleSchema from 'simpl-schema';
+import { Tracker } from 'meteor/tracker';
 
 /* eslint-disable object-shorthand */
 
@@ -21,6 +22,6 @@ export const ImageDataSchema = new SimpleSchema({
     label: 'Thumbnail',
     type: String,
   },
-});
+}, { tracker: Tracker });
 
 ImageData.attachSchema(ImageDataSchema);

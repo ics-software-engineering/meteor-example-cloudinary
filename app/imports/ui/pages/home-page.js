@@ -1,6 +1,5 @@
 import { Template } from 'meteor/templating';
 import { ReactiveDict } from 'meteor/reactive-dict';
-import { _ } from 'meteor/underscore';
 import { ImageData, ImageDataSchema } from '../../api/imagedata/imagedata.js';
 
 /* eslint-disable no-param-reassign */
@@ -18,16 +17,10 @@ Template.Home_Page.helpers({
   errorClass() {
     return Template.instance().messageFlags.get(displayErrorMessages) ? 'error' : '';
   },
-  fieldError(fieldName) {
-    const invalidKeys = Template.instance().context.invalidKeys();
-    const errorObject = _.find(invalidKeys, (keyObj) => keyObj.name === fieldName);
-    return errorObject && Template.instance().context.keyErrorMessage(errorObject.name);
-  },
   images() {
     return ImageData.find();
   },
 });
-
 
 Template.Home_Page.events({
   'submit'(event, instance) {
@@ -38,13 +31,13 @@ Template.Home_Page.events({
     const thumbnail = event.target.cloudinaryThumbnail.value;
     const newImageData = { name, url, thumbnail };
     // Clear out any old validation errors.
-    instance.context.resetValidation();
+    instance.context.reset();
     // Invoke clean so that newStudentData reflects what will be inserted.
-    ImageDataSchema.clean(newImageData);
+    const cleanData = ImageDataSchema.clean(newImageData);
     // Determine validity.
-    instance.context.validate(newImageData);
+    instance.context.validate(cleanData);
     if (instance.context.isValid()) {
-      ImageData.insert(newImageData);
+      ImageData.insert(cleanData);
       instance.messageFlags.set(displayErrorMessages, false);
       instance.find('form').reset();
     } else {
@@ -52,4 +45,3 @@ Template.Home_Page.events({
     }
   },
 });
-
